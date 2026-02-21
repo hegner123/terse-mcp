@@ -36,7 +36,15 @@ Every tool runs as both an MCP server (JSON-RPC 2.0 over stdio) and a standalone
 |------|-------------|----------|
 | [stump](https://github.com/hegner123/stump) | Token-efficient directory tree visualization. 50%+ token reduction over `tree`. Configurable depth, smart filtering, symlink handling, performance metrics. | Zig |
 | [list](https://github.com/hegner123/list) | Single-depth directory listing with compact JSON. Optional metadata (size, mtime, perms, subdirectory counts). Replaces verbose `ls` output. | Go |
-| [notab](https://github.com/hegner123/notab) | Whitespace normalizer. Replaces tabs with spaces or vice versa. Inverse mode for Makefiles and other tab-required formats. | Go |
+
+### File Recovery
+
+Tools that let AI agents recover from files they can't read or edit.
+
+| Tool | Description | Language |
+|------|-------------|----------|
+| [notab](https://github.com/hegner123/notab) | Replaces all tabs in a file with spaces so AI agents can edit it. Inverse mode converts leading spaces back to tabs for Makefiles and other tab-required formats. | Go |
+| [utf8](https://github.com/hegner123/utf8) | Corrects malformed UTF-16 and UTF-8 files into readable UTF-8. Fixes null-laced ASCII, missing BOMs, and unpaired surrogates in-place with backup. | Go |
 
 ### RAG & Memory
 
@@ -44,12 +52,6 @@ Every tool runs as both an MCP server (JSON-RPC 2.0 over stdio) and a standalone
 |------|-------------|----------|
 | [ingest](https://github.com/hegner123/ingest) | RAG document ingestion pipeline. Processes markdown into semantic vector embeddings stored in PostgreSQL+pgvector. Supports add, list, delete, and search operations. | Go |
 | [mem](https://github.com/hegner123/mem) | Persistent memory store for AI agents. Key-value storage with tagging and full-text search, backed by SQLite. | Go |
-
-### Encoding & Text
-
-| Tool | Description | Language |
-|------|-------------|----------|
-| [utf8](https://github.com/hegner123/utf8) | Detects and fixes corrupted UTF-16 files (null-laced ASCII, missing BOMs, unpaired surrogates). Converts to clean UTF-8 in-place with backup. | Go |
 
 ### Execution & Scaffolding
 
